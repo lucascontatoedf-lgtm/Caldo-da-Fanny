@@ -4,8 +4,8 @@
 > Reúne: estado atual, decisões, roadmap, **processo de trabalho** e **regras**.
 > **Deve ser atualizado antes do fim de cada sessão.**
 
-- **Última atualização:** Sessão 7
-- **Sessão atual:** 7
+- **Última atualização:** Sessão 9
+- **Sessão atual:** 9
 - **Status geral:** **Parte 1 no ar. Entregas C+D em `8348624`. E1 (carrinho) em `505065e`, no ar.**
   Frete 100% no front (Nominatim + Haversine; ORS descartado). Backend **V9 no ar** — `doPost` grava `data.itens` na planilha (17 col, A1:Q1) + healthcheck `doGet`. **Entrega E concluída no FRONT: E1 (carrinho — múltiplos caldos por tamanho, preço por
   item, ícone SVG da mandioca/P5) + E2 (tela de revisão — `#done` lista itens + Subtotal/Frete/Total, botões
@@ -306,6 +306,19 @@ Organização: a documentação de trabalho fica em `docs/`; o `README.md` fica 
 | `GUIA-INSTALACAO.md` | raiz | A dona (Fanny) | Manual de instalação/operação (leigo). | Conforme necessidade. |
 
 ## 10. Registro de sessões
+
+### Sessão 9
+- **Encerramento / higienização do repositório.** Removidos artefatos órfãos do disco: `google-apps-script.js`
+  da raiz (cópia antiga divergente do canônico `backend/google-apps-script.js` — 12 col sem segurança vs. 17 col
+  com validação; estava untracked), `files.zip` (backup redundante, já gitignorado) e a pasta vazia
+  `.github/workflows/` (nada versionado). Este `contexto.md` — que estava travado na Sessão 7 — sincronizado para
+  refletir as Sessões 8 e 9. Governança (`prompt.md`/`code.md`) mantida no repo por fato (projeto pessoal/portfólio,
+  sem cliente ativo). Detalhe em [`docs/resumo-sessao-9.md`](resumo-sessao-9.md).
+
+### Sessão 8
+- **Migração de hosting Netlify → Cloudflare** (Workers Static Assets), validada ponta-a-ponta (frontend +
+  backend Apps Script). Motivo: pausa recorrente por estouro de cota mensal no Netlify. Backend (Google Apps
+  Script) intacto — não afetado. Detalhe em [`docs/resumo-sessao-8.md`](resumo-sessao-8.md).
 
 ### Sessão 7
 - **P9 (dívida técnica) — RESOLVIDO ⇒ backlog 100% fechado.** Duas frentes, sem tocar código de produção:
